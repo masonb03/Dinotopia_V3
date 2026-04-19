@@ -1,9 +1,11 @@
 import Image from "next/image";
 import rex from "../public/Trex.jpg"
+import Navbar from "@/components/layout/Navbar";
 
 export default function Home() {
   return (
     <div>
+      <Navbar />
       <section id="landing">
         <div className="row">
           <div className="container">
