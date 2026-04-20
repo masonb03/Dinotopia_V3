@@ -1,11 +1,9 @@
-import Image from "next/image";
-import rex from "../public/Trex.jpg"
-import Navbar from "@/components/layout/Navbar";
+import DinoGrid from "@/components/dino/DinoGrid";
+import { dinosaurs } from "@/data/dinosaur";
 
 export default function Home() {
   return (
     <div>
-      <Navbar />
       <section id="landing">
         <div className="row">
           <div className="container">
@@ -85,140 +83,7 @@ export default function Home() {
               <button className="feature__tabs--title feature__tabs--btn">Carnivore</button>
               <button className="feature__tabs--title feature__tabs--btn">Herbivore</button>
             </div>
-            <div className="feature__grid">
-              <div className="feature__card">
-                <figure className="card__img--wrapper">
-                  <div className="card__content--period-pill">Cretaceous</div>
-                  <Image  src={rex} 
-                          alt="Dinosaur placeholder" 
-                          width={300} 
-                          height={200} 
-                  />
-                </figure>
-                <div className="card__content">
-                  <div className="card__content--title">Tyrannosaurus Rex</div>
-                  <div className="card__content--sub-facts">
-                    <div className="card__content--period">Cretaceous -</div>
-                    <div className="card__content--years">68-66 MYA</div>
-                  </div>
-                  <div className="card__content--fact-pills">
-                    <div className="fact__pill">Carnivore</div>
-                    <div className="fact__pill">12-13m long</div>
-                    <div className="fact__pill">Theropod</div>
-                  </div>
-                </div>
-              </div>
-              <div className="feature__card">
-                <figure className="card__img--wrapper">
-                  <div className="card__content--period-pill">Cretaceous</div>
-                  <Image  src={rex} 
-                          alt="Dinosaur placeholder" 
-                          width={300} 
-                          height={180}  
-                  />
-                </figure>
-                <div className="card__content">
-                  <div className="card__content--title">Tyrannosaurus Rex</div>
-                  <div className="card__content--sub-facts">
-                    <div className="card__content--period">Cretaceous -</div>
-                    <div className="card__content--years">68-66 MYA</div>
-                  </div>
-                  <div className="card__content--fact-pills">
-                    <div className="fact__pill">Carnivore</div>
-                    <div className="fact__pill">12-13m long</div>
-                    <div className="fact__pill">Theropod</div>
-                  </div>
-                </div>
-              </div>
-              <div className="feature__card">
-                <figure className="card__img--wrapper">
-                  <div className="card__content--period-pill">Cretaceous</div>
-                  <Image  src={rex} 
-                          alt="Dinosaur placeholder" 
-                          width={300} 
-                          height={200} 
-                  />
-                </figure>
-                <div className="card__content">
-                  <div className="card__content--title">Tyrannosaurus Rex</div>
-                  <div className="card__content--sub-facts">
-                    <div className="card__content--period">Cretaceous -</div>
-                    <div className="card__content--years">68-66 MYA</div>
-                  </div>
-                  <div className="card__content--fact-pills">
-                    <div className="fact__pill">Carnivore</div>
-                    <div className="fact__pill">12-13m long</div>
-                    <div className="fact__pill">Theropod</div>
-                  </div>
-                </div>
-              </div>
-              <div className="feature__card">
-                <figure className="card__img--wrapper">
-                  <div className="card__content--period-pill">Cretaceous</div>
-                  <Image  src={rex} 
-                          alt="Dinosaur placeholder" 
-                          width={300} 
-                          height={200} 
-                  />
-                </figure>
-                <div className="card__content">
-                  <div className="card__content--title">Tyrannosaurus Rex</div>
-                  <div className="card__content--sub-facts">
-                    <div className="card__content--period">Cretaceous -</div>
-                    <div className="card__content--years">68-66 MYA</div>
-                  </div>
-                  <div className="card__content--fact-pills">
-                    <div className="fact__pill">Carnivore</div>
-                    <div className="fact__pill">12-13m long</div>
-                    <div className="fact__pill">Theropod</div>
-                  </div>
-                </div>
-              </div>
-              <div className="feature__card">
-                <figure className="card__img--wrapper">
-                  <div className="card__content--period-pill">Cretaceous</div>
-                  <Image  src={rex} 
-                          alt="Dinosaur placeholder" 
-                          width={300} 
-                          height={200} 
-                  />
-                </figure>
-                <div className="card__content">
-                  <div className="card__content--title">Tyrannosaurus Rex</div>
-                  <div className="card__content--sub-facts">
-                    <div className="card__content--period">Cretaceous -</div>
-                    <div className="card__content--years">68-66 MYA</div>
-                  </div>
-                  <div className="card__content--fact-pills">
-                    <div className="fact__pill">Carnivore</div>
-                    <div className="fact__pill">12-13m long</div>
-                    <div className="fact__pill">Theropod</div>
-                  </div>
-                </div>
-              </div>
-              <div className="feature__card">
-                <figure className="card__img--wrapper">
-                  <div className="card__content--period-pill">Cretaceous</div>
-                  <Image  src={rex} 
-                          alt="Dinosaur placeholder" 
-                          width={300} 
-                          height={200} 
-                  />
-                </figure>
-                <div className="card__content">
-                  <div className="card__content--title">Tyrannosaurus Rex</div>
-                  <div className="card__content--sub-facts">
-                    <div className="card__content--period">Cretaceous -</div>
-                    <div className="card__content--years">68-66 MYA</div>
-                  </div>
-                  <div className="card__content--fact-pills">
-                    <div className="fact__pill">Carnivore</div>
-                    <div className="fact__pill">12-13m long</div>
-                    <div className="fact__pill">Theropod</div>
-                  </div>
-                </div>
-              </div>
-            </div>
+              <DinoGrid dinosaurs={dinosaurs.slice(0, 6)} />
           </div>
         </div>
       </section>

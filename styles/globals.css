@@ -263,89 +263,9 @@ button {
 
 .feature__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, minmax(200px, 1fr));
   gap: 20px;
-}
-
-.feature__card {
-  display: block;
-  border: 1px solid rgb(95, 95, 95);
-  border-radius: 12px;
-  transition: all 0.5s;
-}
-
-.feature__card:hover {
-  cursor: pointer;
-  border-color: #fff;
-}
-
-.card__content {
-  margin: 12px 4px;
-}
-
-.card__img--wrapper {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  height: 180px;
-  overflow-x: hidden;
-  margin: 0;
-  position: relative;
-}
-
-.card__img--wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
-}
-
-.card__content--period-pill {
-  display: inline-block;
-  background: #1a3a6b;
-  color: #95baff;
-  font-size: 11px;
-  font-weight: 500;
-  padding: 3px 10px;
-  border-radius: 20px;
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  z-index: 1;
-}
-
-.card__content--sub-facts {
-  display: flex;
-  justify-content: start;
-  gap: 8px;
-}
-
-.card__content--title {
-  font-size: 20px;
-  font-weight: 500;
-  color: #fff;
-}
-
-.card__content--period,
-.card__content--years {
-  font-size: 16px;
-  color: #919191;
-}
-
-.card__content--fact-pills {
-  display: flex;
-  gap: 6px;
-  flex-wrap: wrap;
-  margin-top: 4px;
-}
-
-.fact__pill {
-  font-size: 12px;
-  padding: 3px 10px;
-  border-radius: 20px;
-  background: #3a3a3a;
-  color: #aaa;
-  border: 1px solid #555;
+  align-items: start;
 }
 
 /* Quiz */

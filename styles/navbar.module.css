@@ -11,9 +11,10 @@
 }
 
 .navbar__logo {
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
+  font-size: 20px;
+  font-weight: 500;
+  color: #fff;
+  cursor: pointer;
 }
 
 .navbar__links {
