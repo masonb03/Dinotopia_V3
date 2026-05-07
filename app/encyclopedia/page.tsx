@@ -40,6 +40,9 @@ const sorted = useMemo(() => {
       case "length":
         return (a.length ?? 0) - (b.length ?? 0);
 
+      case "weight":
+        return (a.weight ?? 0) - (b.weight ?? 0);
+
       default:
         return 0;
     }

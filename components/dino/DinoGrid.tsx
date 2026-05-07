@@ -1,3 +1,4 @@
+
 import { Dinosaur } from "@/data/dinosaur";
 import DinoCard from "./DinoCard";
 import styles from "@/styles/dinogrid.module.css";
