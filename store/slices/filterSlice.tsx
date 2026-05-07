@@ -4,7 +4,7 @@ interface FilterState {
     searchQuery: string;
     periods: string[];
     diets: string[];
-    sortBy: 'name' | 'period' | 'length';
+    sortBy: 'name' | 'period' | 'length' | 'weight';
 }
 
 const initialState: FilterState = {
@@ -30,9 +30,12 @@ const filterSlice = createSlice({
             }
         },
         toggleDiet(state, action: PayloadAction<string>) {
+            console.log(action.payload)
             const diet = action.payload 
             if (state.diets.includes(diet)) {
                 state.diets = state.diets.filter(d => d !== diet)
+            } else {
+                state.diets.push(diet)
             }
         },
         setSortBy(state, action: PayloadAction<FilterState['sortBy']>) {

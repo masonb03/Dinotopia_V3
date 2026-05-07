@@ -1,9 +1,13 @@
-import React from 'react'
+import { createSlice } from "@reduxjs/toolkit";
 
-const authSlice = () => {
-  return (
-    <div>authSlice</div>
-  )
-}
+const initialState = {
+  user: null,
+};
 
-export default authSlice
+const authSlice = createSlice({
+  name: "auth",
+  initialState,
+  reducers: {},
+});
+
+export default authSlice.reducer;
